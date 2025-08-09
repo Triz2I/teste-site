@@ -9,6 +9,9 @@
 
 body {
   font: 1rem 'Montserrat', sans-serif;
+  background-color: var(--branco);
+  margin: 0;
+  padding: 0;
 }
 
 header, .formulario {
@@ -20,23 +23,26 @@ section {
 }
 
 .nav-link {
-  color: #0124ec;
+  color: var(--azul);
   font-weight: 600;
 }
 
 .inicio-fundo {
-  background: url('img/background.jpg') center/cover no-repeat;
+  background: url('img/volei-header.png') center/cover no-repeat;
   border-radius: 80px;
   width: 100%;
   height: 606px;
   padding: 40px;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
 .img-inicio {
   position: absolute;
   right: 0;
-  top: 18rem;
+  bottom: 0;
   width: 45rem;
   height: auto;
 }
@@ -46,6 +52,7 @@ section {
   flex-direction: column;
   align-items: flex-start;
   gap: 1rem;
+  z-index: 1;
 }
 
 .botao-inicio {
@@ -55,16 +62,13 @@ section {
   border: none;
   width: 14em;
   height: 3em;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
-.formulario button,
-.alto-contraste .formulario button,
-.alto-contraste .btn-primary,
-.botao-inicio {
-  background: var(--azul);
-  border: none;
-  color: var(--branco);
-  font-weight: bold;
+.botao-inicio:hover {
+  background: var(--amarelo);
+  color: var(--preto);
 }
 
 .display-4 {
@@ -75,11 +79,10 @@ section {
   position: relative;
   padding-top: 5rem;
   margin: 3rem 0;
-  background: url('img/bola-canto.jpg') top right no-repeat, 
-              url('img/bola-canto-esquerda.jpg') bottom left no-repeat;
+  background: url('img/bola-direita.png') top right no-repeat, 
+              url('img/bola-esquerda.png') bottom left no-repeat;
   background-size: 180px;
 }
-
 
 #SpikePro .container {
   display: flex;
@@ -87,6 +90,7 @@ section {
   justify-content: center;
   position: relative;
   z-index: 1;
+  text-align: center;
 }
 
 h2 {
@@ -96,7 +100,8 @@ h2 {
 }
 
 #galeria {
-  background: #ffd700;
+  background: var(--amarelo);
+  padding: 3rem 0;
 }
 
 .fundo-galeria {
@@ -105,7 +110,7 @@ h2 {
 }
 
 #contato {
-  background: url('img/background.jpg') center/cover no-repeat;
+  background: url('img/contato-bg.png') center/cover no-repeat;
   padding: 4rem 0;
 }
 
@@ -120,8 +125,9 @@ h2 {
 .alto-contraste .formulario button,
 .alto-contraste .btn-primary,
 .botao-inicio {
-  background: #0124ec;
+  background: var(--azul);
   border: none;
+  color: var(--branco);
   font-weight: bold;
 }
 
@@ -129,6 +135,44 @@ h2 {
   background: #e4c202;
 }
 
+.evento-destaque {
+  background: linear-gradient(135deg, var(--azul) 50%, var(--amarelo) 50%);
+  color: var(--branco);
+  text-align: center;
+  padding: 3rem 1rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.evento-destaque h2 {
+  font-family: 'Lemon', serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.evento-destaque p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.evento-destaque .btn-evento {
+  background: var(--branco);
+  color: var(--azul);
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.evento-destaque .btn-evento:hover {
+  background: var(--amarelo);
+  color: var(--preto);
+}
+
+/* Acessibilidade */
 .menu-acessibilidade {
   position: fixed;
   top: 2rem;
